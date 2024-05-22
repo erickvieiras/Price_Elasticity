@@ -6,3 +6,5 @@ plotly
 inflection
 streamlit
 scikit-learn
+statsmodels
+streamlit_extras
