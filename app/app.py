@@ -9,12 +9,12 @@ from streamlit_extras.metric_cards import style_metric_cards
 
 # Load Data===========================================================================================
 
-df_raw = pd.read_csv('../dataset/src/price_elasticity.csv')
+df_raw = pd.read_csv('dataset/src/price_elasticity.csv')
 df_raw = df_raw.drop(columns = ['Unnamed: 0'])
-df_bp = pd.read_csv('../dataset/src/business_performance.csv')
-df_e = pd.read_csv('../dataset/src/elasticity.csv')
+df_bp = pd.read_csv('dataset/src/business_performance.csv')
+df_e = pd.read_csv('dataset/src/elasticity.csv')
 df_e = df_e.drop(columns = ['Unnamed: 0'])
-df_cp = pd.read_csv('../dataset/src/cross_price.csv')
+df_cp = pd.read_csv('dataset/src/cross_price.csv')
 
 # Page config ========================================================================================
 st.set_page_config(layout="wide", initial_sidebar_state="collapsed")
@@ -26,7 +26,7 @@ tab1, tab2, tab3, tab4 = st.tabs(['About Project', 'Product Elasticity Analysis'
 
 with tab1:
     st.subheader('Business Problem')
-    st.text('A company intends to change the prices of the products it sells, but is concerned that this alteration might impact the demand \nfor these products and consequently affect revenue. As a data analyst/scientist, you need to determine price elasticity using scientific \nmethodology based on the data from the prices of the products sold by the company.')
+    st.text('A company intends dto change the prices of the products it sells, but is concerned that this alteration might impact the demand \nfor these products and consequently affect revenue. As a data analyst/scientist, you need to determine price elasticity using scientific \nmethodology based on the data from the prices of the products sold by the company.')
     st.dataframe(df_raw, use_container_width = True)
 
 with tab2:
